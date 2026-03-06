@@ -1,6 +1,10 @@
 // Seleciona o ícone do menu e a lista de navegação pelo ID
-const menuIcon = document.getElementById('menu-icon');
-const navList = document.getElementById('nav-list');
+const menuBtn = document.getElementById('menuBtn');
+const menu = document.getElementById('menu');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
 
 // Adiciona um evento de clique ao ícone do menu
 menuIcon.addEventListener('click', () => {
