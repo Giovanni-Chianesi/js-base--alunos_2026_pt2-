@@ -8,8 +8,17 @@ let intervalId = null;
 startButton.addEventListener('click', function() {
     if (intervalId === null) {
         intervalId = setInterval(function() {
+
             count++;
-            timer.textContent = count;
+
+            let minutos = Math.floor(count / 60);
+            let segundos = count % 60;
+
+            minutos = String(minutos).padStart(2, "0");
+            segundos = String(segundos).padStart(2, "0");
+
+            timer.textContent = minutos + ":" + segundos;
+
         }, 1000);
     }
 });
